@@ -13,7 +13,7 @@
 
 				<div class="card">
 					<div class="card-header">
-						Routing Information
+						Informacje o routingu
 						<span class="badge badge-primary pull-right">{{ count($routes) }} routes</span>
 					</div>
 					<div class="card-body">
@@ -22,9 +22,9 @@
 								<thead>
 									<tr class="success">
 					                    <th>URI</th>
-					                    <th>Name</th>
-					                    <th>Type</th>
-					                    <th>Method</th>
+					                    <th>Nazwa</th>
+					                    <th>Typ</th>
+					                    <th>Metoda</th>
 									</tr>
 								</thead>
 								<tbody>

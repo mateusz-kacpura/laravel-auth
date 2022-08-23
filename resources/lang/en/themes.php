@@ -10,66 +10,66 @@ return [
     */
 
     // Messages
-    'createSuccess'     => 'Theme created! ',
-    'updateSuccess'     => 'Theme updated! ',
-    'deleteSuccess'     => 'Theme deleted! ',
-    'deleteSelfError'   => 'You cannot delete the default theme. ',
+    'createSuccess'     => 'Szablon utworzony!! ',
+    'updateSuccess'     => 'Szablon zaktualizowany! ',
+    'deleteSuccess'     => 'Szablon usunięty! ',
+    'deleteSelfError'   => 'Nie możesz usunąć pustego szablonu. ',
 
     // Shared
-    'statusLabel'       => 'Theme Status',
-    'statusEnabled'     => 'Enabled',
-    'statusDisabled'    => 'Disabled',
+    'statusLabel'       => 'Status szablonu',
+    'statusEnabled'     => 'Włączony',
+    'statusDisabled'    => 'Wyłączony',
 
-    'nameLabel'         => 'Theme Name *',
+    'nameLabel'         => 'Nazwa szablonu *',
     'namePlaceholder'   => 'Enter Theme Name',
 
     'linkLabel'         => 'Theme CSS Link *',
     'linkPlaceholder'   => 'Enter CSS Link',
 
-    'notesLabel'        => 'Theme Notes',
+    'notesLabel'        => 'Notatki',
     'notesPlaceholder'  => 'Enter Theme Notes',
 
-    'themes'            => 'Themes',
+    'themes'            => 'Szablon',
 
     // Add Theme
-    'btnAddTheme'       => 'Add Theme',
+    'btnAddTheme'       => 'Dodaj szablon',
 
     // Edit Theme
-    'editTitle'         => 'Editing Theme:',
-    'editSave'          => 'Save Theme Changes',
-    'themeTitle'        => 'Theme :name',
+    'editTitle'         => 'Edytuj szablon:',
+    'editSave'          => 'Zapisz zmiany w szablonie',
+    'themeTitle'        => 'Szablon :nazwa',
 
     // Show Theme
-    'showHeadTitle'     => 'Theme',
-    'showTitle'         => 'Theme Information',
-    'showBackBtn'       => 'Back to Themes',
-    'showUsers'         => 'Theme Users',
+    'showHeadTitle'     => 'Szablon',
+    'showTitle'         => 'Szablon Informacje',
+    'showBackBtn'       => 'Wróć do Szablonów',
+    'showUsers'         => 'Szablon użytkownika',
     'showStatus'        => 'Status',
     'showLink'          => 'CSS Link',
-    'showNotes'         => 'Notes',
-    'showAdded'         => 'Added',
-    'showUpdated'       => 'Updated',
-    'confirmDeleteHdr'  => 'Delete Theme',
-    'confirmDelete'     => 'Are you sure you want to delete this theme?',
+    'showNotes'         => 'Notatki',
+    'showAdded'         => 'Dodaj',
+    'showUpdated'       => 'Zaktualizuj',
+    'confirmDeleteHdr'  => 'Usuń szablon',
+    'confirmDelete'     => 'Jesteś pewny, że chcesz csunąć szablon?',
 
     // Show Themes
-    'themesTitle'       => 'Showing All',
+    'themesTitle'       => 'Pokaż wszystko',
     'themesStatus'      => 'Status',
-    'themesUsers'       => 'Users',
-    'themesName'        => 'Name',
+    'themesUsers'       => 'Użytkownik',
+    'themesName'        => 'Nazwa',
     'themesLink'        => 'CSS Link',
-    'themesActions'     => 'Actions',
-    'themesBtnShow'     => 'Show Theme',
-    'themesBtnEdit'     => 'Edit Theme',
+    'themesActions'     => 'Akcja',
+    'themesBtnShow'     => 'Pokaż szablon',
+    'themesBtnEdit'     => 'Edytuj szablon',
     'themesBtnDelete'   => '',
     'themesBtnEdits'    => '',
 
     // Tooltips
-    'backToThemeTt'     => 'Back to Theme',
-    'backToThemesTt'    => 'Back to Themes',
+    'backToThemeTt'     => 'Powrót do szablonu',
+    'backToThemesTt'    => 'Powrót do szablonów',
 
     // Buttons
-    'backToThemeBtn'    => 'Back  <span class="hidden-xs">to Theme</span>',
-    'backToThemesBtn'   => '<span class="hidden-xs">Back to </span>Themes',
+    'backToThemeBtn'    => 'Wróć  <span class="hidden-xs">do szablonu/span>',
+    'backToThemesBtn'   => '<span class="hidden-xs">Wróć do </span>szablonów',
 
 ];

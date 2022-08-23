@@ -59,6 +59,36 @@
                     </li>
                 @endrole
             </ul>
+            <ul class="navbar-nav ml-auto" id="navbarSupportedContent">
+            @role('admin')
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {!! trans('titles.editorNavName') !!}
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item {{ (Request::is('roles') || Request::is('permissions')) ? 'active' : null }}" href="{{ url('/panel')  }}">
+                                {!! trans('titles.mainEditorPanel') !!}
+                            </a>
+                        <div class="dropdown-divider"></div>
+                            <a class="dropdown-item {{ (Request::is('roles') || Request::is('permissions')) ? 'active' : null }}" href="{{ url('/posts/create')  }}">
+                                {!! trans('titles.createArticle') !!}
+                            </a>      
+                        <div class="dropdown-divider"></div>
+                            <a class="dropdown-item {{ (Request::is('roles') || Request::is('permissions')) ? 'active' : null }}" href="{{ url('/posts') }}">
+                                {!! trans('titles.viewArticles') !!}
+                            </a>
+                        <div class="dropdown-divider"></div>
+                            <a class="dropdown-item {{ (Request::is('roles') || Request::is('permissions')) ? 'active' : null }}" href="{{ url('/categories/create') }}">
+                                {!! trans('titles.addCategories') !!}
+                            </a>
+                        <div class="dropdown-divider"></div>
+                            <a class="dropdown-item {{ (Request::is('roles') || Request::is('permissions')) ? 'active' : null }}" href="{{ url('/categories') }}">
+                                {!! trans('titles.viweCategories') !!}
+                            </a>  
+                        </div>
+                    </li>
+                @endrole
+            </ul>                
             {{-- Right Side Of Navbar --}}
             <ul class="navbar-nav ml-auto">
                 {{-- Authentication Links --}}

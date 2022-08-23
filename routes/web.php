@@ -2,6 +2,12 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\HomeController;
+use Illuminate\Support\Facades\Auth;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -130,6 +136,17 @@ Route::group(['middleware' => ['auth', 'activated', 'role:admin', 'activity', 't
     Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
     Route::get('routes', 'App\Http\Controllers\AdminDetailsController@listRoutes');
     Route::get('active-users', 'App\Http\Controllers\AdminDetailsController@activeUsers');
+
+
+    Route::get('/panel', [\App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
+
+    Route::resource('/posts', \App\Http\Controllers\PostController::class);
+
+    Route::resource('/categories', \App\Http\Controllers\CategoryController::class);  
+
 });
+
+    Route::get('/', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/viewpost/{id}', [\App\Http\Controllers\HomeController::class, 'show'])->name('viewpost'); //ok
 
 Route::redirect('/php', '/phpinfo', 301);

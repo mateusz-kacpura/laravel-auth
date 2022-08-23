@@ -16,11 +16,11 @@
 
         @role('admin', true)
             <span class="pull-right badge badge-primary" style="margin-top:4px">
-                Admin Access
+                Prawa administratora
             </span>
         @else
             <span class="pull-right badge badge-warning" style="margin-top:4px">
-                User Access
+                Dostęp użytkownika
             </span>
         @endrole
 
@@ -30,7 +30,7 @@
             {{ trans('auth.loggedIn') }}
         </h2>
         <p>
-            <em>Thank you</em> for checking this project out. <strong>Please remember to star it!</strong>
+            <em>Dziękujemy Tobie</em> za sprawdzenie tego projektu <strong>Please remember to star it!</strong>
         </p>
         <p>
             <iframe src="https://ghbtns.com/github-btn.html?user=jeremykenedy&repo=laravel-auth&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px" style="margin: 0px 0 -3px .5em;"></iframe>
@@ -47,13 +47,13 @@
         <hr>
 
         <p>
-            You have
+            Masz uprawnienia
                 <strong>
                     @role('admin')
-                       Admin
+                       administratora
                     @endrole
                     @role('user')
-                       User
+                       użytkownika
                     @endrole
                 </strong>
             Access
@@ -62,7 +62,7 @@
         <hr>
 
         <p>
-            You have access to {{ $levelAmount }}:
+            Masz dostęp do {{ $levelAmount }}:
             @level(5)
                 <span class="badge badge-primary margin-half">5</span>
             @endlevel
@@ -89,7 +89,7 @@
             <hr>
 
             <p>
-                You have permissions:
+                Masz uprawnienia do
                 @permission('view.users')
                     <span class="badge badge-primary margin-half margin-left-0">
                         {{ trans('permsandroles.permissionView') }}

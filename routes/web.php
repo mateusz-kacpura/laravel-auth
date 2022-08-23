@@ -51,6 +51,12 @@ Route::group(['middleware' => ['web', 'activity', 'checkblocked']], function () 
 // Registered and Activated User Routes
 Route::group(['middleware' => ['auth', 'activated', 'activity', 'checkblocked']], function () {
 
+    Route::get('/panel', [\App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
+
+    Route::resource('/posts', \App\Http\Controllers\PostController::class);
+
+    Route::resource('/categories', \App\Http\Controllers\CategoryController::class);  
+
     // Activation Routes
     Route::get('/activation-required', ['uses' => 'App\Http\Controllers\Auth\ActivateController@activationRequired'])->name('activation-required');
     Route::get('/logout', ['uses' => 'App\Http\Controllers\Auth\LoginController@logout'])->name('logout');
@@ -136,13 +142,6 @@ Route::group(['middleware' => ['auth', 'activated', 'role:admin', 'activity', 't
     Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
     Route::get('routes', 'App\Http\Controllers\AdminDetailsController@listRoutes');
     Route::get('active-users', 'App\Http\Controllers\AdminDetailsController@activeUsers');
-
-
-    Route::get('/panel', [\App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
-
-    Route::resource('/posts', \App\Http\Controllers\PostController::class);
-
-    Route::resource('/categories', \App\Http\Controllers\CategoryController::class);  
 
 });
 

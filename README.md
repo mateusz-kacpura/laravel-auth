@@ -1,6 +1,9 @@
+Ten projekt obejmuje stworzenie kopletnej platformy prasowej, jeśli ktoś jest zainteresowany tworzeniem ze mną zapraszam do kontaktu
+This one complete the project, shared communication platform if anyone is interested in creating visited with me to contact
+
 This aplication connect two project from github
-https://github.com/jeremykenedy
-https://github.com/abby2727/true-tech-source
+## https://github.com/jeremykenedy </br>
+## https://github.com/abby2727/true-tech-source
 
 I modified the code a little and added my own
 

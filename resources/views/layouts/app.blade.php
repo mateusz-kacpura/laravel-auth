@@ -56,7 +56,7 @@
     <body>
         <div id="app">
 
-            @include('partials.nav')
+            @include('partials.nav_admin')
 
             <main class="py-4">
 

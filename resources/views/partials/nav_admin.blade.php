@@ -1,4 +1,5 @@
-<nav class="navbar navbar-expand-md navbar-light navbar-laravel">
+<!-- Admin nav bar -->
+<nav style="border: 0px solid black;" class="navbar navbar-expand-md navbar-light navbar-laravel">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
             {!! config('app.name', trans('titles.app')) !!}
@@ -58,31 +59,57 @@
                         </div>
                     </li>
                 @endrole
-            </ul>
-            <ul class="navbar-nav ml-auto" id="navbarSupportedContent">
+                @role('admin')
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {!! trans('titles.editorNavName') !!}
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item {{ (Request::is('roles') || Request::is('permissions')) ? 'active' : null }}" href="{{ url('/blog_admin')  }}">
+                                {!! trans('titles.mainEditorPanel') !!}
+                            </a>
+                        <div class="dropdown-divider"></div>
+                            <a class="dropdown-item {{ (Request::is('roles') || Request::is('permissions')) ? 'active' : null }}" href="{{ url('/blog_admin/add_post')  }}">
+                                {!! trans('titles.createArticle') !!}
+                            </a>      
+                        <div class="dropdown-divider"></div>
+                            <a class="dropdown-item {{ (Request::is('roles') || Request::is('permissions')) ? 'active' : null }}" href="{{ url('/blog_admin') }}">
+                                {!! trans('titles.viewArticles') !!}
+                            </a>
+                        <div class="dropdown-divider"></div>
+                            <a class="dropdown-item {{ (Request::is('roles') || Request::is('permissions')) ? 'active' : null }}" href="{{ url('/blog_admin/categories/add_category') }}">
+                                {!! trans('titles.addCategories') !!}
+                            </a>
+                        <div class="dropdown-divider"></div>
+                            <a class="dropdown-item {{ (Request::is('roles') || Request::is('permissions')) ? 'active' : null }}" href="{{ url('/blog_admin/categories') }}">
+                                {!! trans('titles.viweCategories') !!}
+                            </a>  
+                        </div>
+                    </li>
+                @endrole
             @role('user')
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             {!! trans('titles.editorNavName') !!}
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item {{ (Request::is('roles') || Request::is('permissions')) ? 'active' : null }}" href="{{ url('/panel')  }}">
+                            <a class="dropdown-item {{ (Request::is('roles') || Request::is('permissions')) ? 'active' : null }}" href="{{ url('/blog_admin')  }}">
                                 {!! trans('titles.mainEditorPanel') !!}
                             </a>
                         <div class="dropdown-divider"></div>
-                            <a class="dropdown-item {{ (Request::is('roles') || Request::is('permissions')) ? 'active' : null }}" href="{{ url('/posts/create')  }}">
+                            <a class="dropdown-item {{ (Request::is('roles') || Request::is('permissions')) ? 'active' : null }}" href="{{ url('/blog_admin/add_post')  }}">
                                 {!! trans('titles.createArticle') !!}
                             </a>      
                         <div class="dropdown-divider"></div>
-                            <a class="dropdown-item {{ (Request::is('roles') || Request::is('permissions')) ? 'active' : null }}" href="{{ url('/posts') }}">
+                            <a class="dropdown-item {{ (Request::is('roles') || Request::is('permissions')) ? 'active' : null }}" href="{{ url('/blog_admin') }}">
                                 {!! trans('titles.viewArticles') !!}
                             </a>
                         <div class="dropdown-divider"></div>
-                            <a class="dropdown-item {{ (Request::is('roles') || Request::is('permissions')) ? 'active' : null }}" href="{{ url('/categories/create') }}">
+                            <a class="dropdown-item {{ (Request::is('roles') || Request::is('permissions')) ? 'active' : null }}" href="{{ url('/blog_admin/categories/add_category') }}">
                                 {!! trans('titles.addCategories') !!}
                             </a>
                         <div class="dropdown-divider"></div>
-                            <a class="dropdown-item {{ (Request::is('roles') || Request::is('permissions')) ? 'active' : null }}" href="{{ url('/categories') }}">
+                            <a class="dropdown-item {{ (Request::is('roles') || Request::is('permissions')) ? 'active' : null }}" href="{{ url('/blog_admin/categories') }}">
                                 {!! trans('titles.viweCategories') !!}
                             </a>  
                         </div>

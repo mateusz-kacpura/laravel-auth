@@ -1,3 +1,5 @@
+PHP 8.1 / Laravel 9
+
 Ten projekt obejmuje stworzenie kopletnej platformy prasowej, jeśli ktoś jest zainteresowany tworzeniem ze mną zapraszam do kontaktu
 This one complete the project, shared communication platform if anyone is interested in creating visited with me to contact
 

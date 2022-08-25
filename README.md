@@ -1,9 +1,12 @@
 Ten projekt obejmuje stworzenie kopletnej platformy prasowej, jeśli ktoś jest zainteresowany tworzeniem ze mną zapraszam do kontaktu
 This one complete the project, shared communication platform if anyone is interested in creating visited with me to contact
 
+Obecnie aplikacja obejmuje:
+
 This aplication connect two project from github
 ## https://github.com/jeremykenedy </br>
-## https://github.com/abby2727/true-tech-source
+## https://github.com/abby2727/true-tech-source -- w trakcie usuwania w zamian będzie używany szablon
+## https://github.com/binshops/laravel-blog.git
 
 I modified the code a little and added my own
 
@@ -37,14 +40,25 @@ Laravel 8 with user authentication, registration with email confirmation, social
 -----------------------------------------------------------------
 You need commit this code
 
+You need instal required composer
+
+# composer install
+
 You need install node
 
-Restart computer add npm to path
+# npm install
+
+You need restart your computer and add your npm to path
 
 You need create database and make migrate
 
+# php artisan migrate
+
+You need to modification php.init in your xampp server ;extension=gd to extension=gd
+
+# You need import database to your phpmyadmin
+
 And start server 127.0.0.1:8000
 
-$ php artisan serve
-
+# php artisan serve
 ----------------------------------------------------------------

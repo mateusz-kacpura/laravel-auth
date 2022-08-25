@@ -3,8 +3,8 @@ This one complete the project, shared communication platform if anyone is intere
 
 Obecnie aplikacja obejmuje:
 
-This aplication connect two project from github
- https://github.com/jeremykenedy </br>
+This aplication connect two project from github </br>
+ https://github.com/jeremykenedy</br>
  https://github.com/abby2727/true-tech-source -- w trakcie usuwania w zamian będzie używany szablon
  https://github.com/binshops/laravel-blog.git
 

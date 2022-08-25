@@ -13,7 +13,7 @@
             <h5 class=''>{{$post->subtitle}}</h5>
 
             @if (config('binshopsblog.show_full_text_at_list'))
-                <p>{!! $post->post_body_output() !!}</p>
+                <p>{!! Str::limit($post->post_body_output(), 100) !!}</p>
             @else
                 <p>{!! mb_strimwidth($post->post_body_output(), 0, 400, "...") !!}</p>
             @endif

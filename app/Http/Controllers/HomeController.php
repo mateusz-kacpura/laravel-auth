@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\Post;
+use BinshopsBlog\Models\BinshopsCategoryTranslation;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -27,11 +28,19 @@ class HomeController extends Controller
 
     public function show($id)
     {
+        $ShowCategories = BinshopsCategoryTranslation::all();
         $posts = Post::find($id);
         $latest_posts = Post::where('category_id', request('category_id'))
             ->latest()
             ->get();
 
-        return view('viewpost', compact('posts', 'latest_posts'));
+        return view('viewpost', compact('ShowCategories', 'posts', 'latest_posts'));
     }
+    public function ShowCategories($id)
+    {
+        $ShowCategories = BinshopsCategoryTranslation::all();
+
+        return view('viewpost',  compact('ShowCategories'));
+    }
+   
 }

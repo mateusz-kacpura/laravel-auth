@@ -1,23 +1,29 @@
 @extends("layouts.master",['title'=>$title])
 
 @section("content")
-
 <!-- main nav page  -->
-@include("partials.nav_page")
+@include("binshopsblog::partials.nav_page")
 
 <!-- main navbar category -- import category partial -->
+<div style="border-top: 1px solid black;">
 @if($categories)
     @include("binshopsblog::partials._category_partial", [
       'category_tree' => $categories,
       'name_chain' => $nameChain = ""
     ])
+    @foreach ($categories as $category)
+               
+                    <a class="nav-link" href="{{ route('home') }}?category_id={{ $category->id }}">{{ $category->name }}</a>
+                
+            @endforeach
 @else
     <span>No Categories</span>
 @endif
+    </div>
 <!-- end main navbar category -->
 
 <!-- main advert header -->
-@include("partials.advert_header")
+@include("binshopsblog::partials.advert_header")
 <!-- end main advert header -->
     <div class='col-sm-12 binshopsblog_container'>
         @if(\Auth::check() && \Auth::user()->canManageBinshopsBlogPosts())

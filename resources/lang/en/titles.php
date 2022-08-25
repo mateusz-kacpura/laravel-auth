@@ -13,7 +13,7 @@ return [
     'profile'           => 'Profil',
     'editProfile'       => 'Edytuj Profil',
     'createProfile'     => 'Utwórz Profil',
-    'adminDropdownNav'  => 'Administrator',
+    'adminDropdownNav'  => 'Panel administratora',
 
     'activation'        => 'Rejestracja rozpoczęta  | Link aktywacyjny został wysłany',
     'exceeded'          => 'Błąd aktywacji konta użytkownika',

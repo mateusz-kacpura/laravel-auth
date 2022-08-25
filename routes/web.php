@@ -146,10 +146,13 @@ Route::group(['middleware' => ['auth', 'activated', 'role:admin', 'activity', 't
 });
 
     Route::get('/', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
-    Route::get('/viewpost/{id}', [\App\Http\Controllers\HomeController::class, 'show'])->name('viewpost'); //ok
+    Route::get('/viewpost/{id}', [\App\Http\Controllers\HomeController::class, 'show'])->name('viewpost');
+
+
 
 Route::redirect('/php', '/phpinfo', 301);
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+

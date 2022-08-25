@@ -1,12 +1,36 @@
-@extends("layouts.app",['title'=>$post->gen_seo_title()])
+@extends("layouts.master",['title'=>$post->gen_seo_title()])
 
 @section('blog-custom-css')
     <link type="text/css" href="{{ asset('binshops-blog.css') }}" rel="stylesheet">
 @endsection
 
 @section("content")
+<!-- main nav page  -->
+@include("binshopsblog::partials.nav_page")
 
-    @if(config("binshopsblog.reading_progress_bar"))
+<!-- main navbar category -- import category partial -->
+<div style="border-top: 1px solid black;">
+@if($categories)
+    @include("binshopsblog::partials._category_partial", [
+      'category_tree' => $categories,
+      'name_chain' => $nameChain = ""
+    ])
+    @foreach ($ShowCategories as $category)
+               
+                    <a class="nav-link" href="{{ route('home') }}?category_id={{ $category->id }}">{{ $category->name }}</a>
+                
+            @endforeach
+@else
+    <span>No Categories</span>
+@endif
+    </div>
+<!-- end main navbar category -->
+
+<!-- main advert header -->
+@include("binshopsblog::partials.advert_header")
+<!-- end main advert header -->
+
+@if(config("binshopsblog.reading_progress_bar"))
         <div id="scrollbar">
             <div id="scrollbar-bg"></div>
         </div>

@@ -37,8 +37,12 @@ Laravel 8 with user authentication, registration with email confirmation, social
 |user@user.com|password|User Access|
 |admin@admin.com|password|Admin Access|
 
------------------------------------------------------------------
+#-----------------------------------------------------------------
+#INSTALL
+
 You need commit this code
+
+$ git commit (link to this repositores)
 
 You need instal required composer
 
@@ -61,4 +65,5 @@ $ You need import database to your phpmyadmin
 And start server 127.0.0.1:8000
 
 $ php artisan serve
+
 ----------------------------------------------------------------

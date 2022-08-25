@@ -42,23 +42,23 @@ You need commit this code
 
 You need instal required composer
 
-# composer install
+$ composer install
 
 You need install node
 
-# npm install
+$ npm install
 
 You need restart your computer and add your npm to path
 
 You need create database and make migrate
 
-# php artisan migrate
+$ php artisan migrate
 
 You need to modification php.init in your xampp server ;extension=gd to extension=gd
 
-# You need import database to your phpmyadmin
+$ You need import database to your phpmyadmin
 
 And start server 127.0.0.1:8000
 
-# php artisan serve
+$ php artisan serve
 ----------------------------------------------------------------

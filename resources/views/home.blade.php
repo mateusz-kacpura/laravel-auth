@@ -1,6 +1,5 @@
 @extends('layouts.master')
 
-
 @section('content')
 <!-- main nav categories -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">

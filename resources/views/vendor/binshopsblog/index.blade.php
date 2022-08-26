@@ -11,11 +11,6 @@
       'category_tree' => $categories,
       'name_chain' => $nameChain = ""
     ])
-    @foreach ($categories as $category)
-               
-                    <a class="nav-link" href="{{ route('home') }}?category_id={{ $category->id }}">{{ $category->name }}</a>
-                
-            @endforeach
 @else
     <span>No Categories</span>
 @endif

@@ -149,7 +149,6 @@ Route::group(['middleware' => ['auth', 'activated', 'role:admin', 'activity', 't
     Route::get('/viewpost/{id}', [\App\Http\Controllers\HomeController::class, 'show'])->name('viewpost');
 
 
-
 Route::redirect('/php', '/phpinfo', 301);
 
 Auth::routes();

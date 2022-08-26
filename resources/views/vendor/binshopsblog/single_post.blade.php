@@ -10,16 +10,36 @@
 
 <!-- main navbar category -- import category partial -->
 <div style="border-top: 1px solid black;">
-@if($categories)
-    @include("binshopsblog::partials._category_partial", [
-      'category_tree' => $categories,
-      'name_chain' => $nameChain = ""
-    ])
-    @foreach ($ShowCategories as $category)
-               
-                    <a class="nav-link" href="{{ route('home') }}?category_id={{ $category->id }}">{{ $category->name }}</a>
-                
-            @endforeach
+@if($ShowCategories)
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+                                <!-- Container wrapper -->
+    <div class="container-fluid">
+        <!-- Toggle button -->
+        <button
+        class="navbar-toggler"
+        type="button"
+        data-mdb-toggle="collapse"
+        data-mdb-target="#navbarCenteredExample"
+        aria-controls="navbarCenteredExample"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Collapsible wrapper -->
+        <div class="collapse navbar-collapse justify-content-center" id="navbarCenteredExample">
+            <ul class="navbar-nav mb-2 mb-lg-0">
+
+        @foreach($ShowCategories as $Categories)
+                <a class="nav-link" href='{{$Categories->categoryTranslations[0]->url($locale)}}'>
+                        {{$Categories->categoryTranslations[0]->category_name}}
+                </a>
+        @endforeach
+        
+        </ul>
+        </div>
+    </div>
+</nav>    
 @else
     <span>No Categories</span>
 @endif

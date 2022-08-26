@@ -40,7 +40,7 @@ class HomeController extends Controller
     {
         $ShowCategories = BinshopsCategoryTranslation::all();
 
-        return view('viewpost',  compact('ShowCategories'));
+        return view('viewpost', 'binshopsblog::single_post',  compact('ShowCategories'));
     }
    
 }
